@@ -159,8 +159,8 @@ Como lectura complementaria no podría recomendar lo suficiente el libro de Jona
 
 ## Anatomía del conjunto de reglas
 
-    [selector]{
-        [propiedad]:[valor];
+    [selector] {
+        [propiedad]: [valor];
         [<- Declaración ->]
     }
 
@@ -178,21 +178,21 @@ Tengo un gran número de estándares cuando estructuro un conjunto de reglas
 Un ejemplo corto:
 
     .widget{
-        padding:10px;
-        border:1px solid #BADA55;
-        background-color:#C0FFEE;
-        -webkit-border-radius:4px;
-           -moz-border-radius:4px;
-                border-radius:4px;
+        padding: 10px;
+        border: 1px solid #BADA55;
+        background-color: #C0FFEE;
+        -webkit-border-radius: 4px;
+           -moz-border-radius: 4px;
+                border-radius: 4px;
     }
         .widget-heading{
-            font-size:1.5rem;
-            line-height:1;
-            font-weight:bold;
-            color:#BADA55;
-            margin-right:-10px;
-            margin-left: -10px;
-            padding:0.25em;
+            font-size: 1.5rem;
+            line-height: 1;
+            font-weight: bold;
+            color: #BADA55;
+            margin-right: -10px;
+            margin-left:  -10px;
+            padding: 0.25em;
         }
 Aquí podemos ver que '.widget-heading' debe ser un hijo de '.widget' ya que tenemos indentado '.widget-heading' un nivel más que '.widget'. Esta información es muy útil para los desarrolladores que ahora pueden hacerse una idea del conjunto con tan solo echar un corto vistazo a las indentaciones de nuestras reglas de estilos.
 
@@ -200,19 +200,19 @@ También podemos ver que las declaraciones de '.widget-heading' están declarada
 
 Una excepción a nuestra regla multi-línea sería en el siguiente caso:
 
-    .t10    { width:10% }
-    .t20    { width:20% }
-    .t25    { width:25% }       /* 1/4 */
-    .t30    { width:30% }
-    .t33    { width:33.333% }   /* 1/3 */
-    .t40    { width:40% }
-    .t50    { width:50% }       /* 1/2 */
-    .t60    { width:60% }
-    .t66    { width:66.666% }   /* 2/3 */
-    .t70    { width:70% }
-    .t75    { width:75% }       /* 3/4*/
-    .t80    { width:80% }
-    .t90    { width:90% }
+    .t10 { width: 10% }
+    .t20 { width: 20% }
+    .t25 { width: 25% }       /* 1/4 */
+    .t30 { width: 30% }
+    .t33 { width: 33.333% }   /* 1/3 */
+    .t40 { width: 40% }
+    .t50 { width: 50% }       /* 1/2 */
+    .t60 { width: 60% }
+    .t66 { width: 66.666% }   /* 2/3 */
+    .t70 { width: 70% }
+    .t75 { width: 75% }       /* 3/4*/
+    .t80 { width: 80% }
+    .t90 { width: 90% }
 
 En este ejemplo (del [sistema de grids de inuit.css](https://github.com/csswizardry/inuit.css/blob/master/inuit.css/partials/base/_tables.scss#L88)) tiene más sentido dejar nuestro CSS en una sola línea.
 
@@ -223,9 +223,9 @@ Mayormente utilizo clases delimitadas por guiones (Ej: '.foo-bar' y no '.foo_bar
 
 La convención de nombre sigue este patrón:
 
-    .bloque{}
-    .bloque__elemento{}
-    .bloque--modificador{}
+    .bloque {}
+    .bloque__elemento {}
+    .bloque--modificador {}
 
 * '.bloque' representa el primer nivel de una abstracción o componente.
 * '.bloque__element' representa un descendente de '.bloque' que se ayuda de '.bloque' como un conjunto.
@@ -233,11 +233,11 @@ La convención de nombre sigue este patrón:
 
 Una **analogía** del funcionamiento de las clases BEM sería:
 
-    .persona{}
-    .persona--mujer{}
-        .persona__mano{}
-        .persona__mano--izquierda{}
-        .persona__mano--derecha{}
+    .persona {}
+    .persona--mujer {}
+        .persona__mano {}
+        .persona__mano--izquierda {}
+        .persona__mano--derecha {}
 
 Aquí vemos como el objeto básico que estamos describiendo es una persona, y que un tipo diferente de persona podría ser una mujer. También podemos ver que las personas tienen manos; son sub-partes de las personas, y que hay variaciones, como izquierda y derecha.
 
@@ -277,7 +277,7 @@ A pesar de ser británico - y escribir toda mi vida _colour_ en vez de _color_ -
 Anteriormente he sugerido y defendido escribir clases bilingües, como por ejemplo:
 
     .color-picker,
-    .colour-picker{
+    .colour-picker {
     }
 
 Sin embargo, tras haber trabajado recientemente en un proyecto bastante largo en Sass donde habían docenas de variables de colores (Ej: '$brand-color', '$highlight-color' etc.) mantener dos versiones de cada variable se volvió agotador. Esto también quiere decir un doble trabajo con funciones como buscar y reemplazar.
@@ -334,9 +334,9 @@ Ahora podemos ver dónde usar esta clase exactamente pero sin las especificacion
 
 Otro ejemplo puede ser:
 
-    /*ol*/.breadcrumb{}
-    /*p*/.intro{}
-    /*ul*/.image-thumbs{}
+    /*ol*/.breadcrumb {}
+    /*p*/.intro {}
+    /*ul*/.image-thumbs {}
 
 Se puede ver dónde queremos usar esta clase pero sin que afecte al selector.
 
@@ -348,12 +348,12 @@ Si escribes un nuevo componente entonces deja algunas etiquetas relativas a su f
     /**
      * ^navigation ^lists
      */
-    .nav{}
+    .nav {}
 
     /**
      * ^grids ^lists ^tables
      */
-    .matrix{}
+    .matrix {}
 
 Estas etiquetas permiten a otros desarrolladores encontrar snippets de código buscando por su función; si un desarrollador necesita trabajar con listas, puede ejecutar una búsqueda por '^lists' y encontrar los objetos '.nav' y '.matrix. (y posiblemente más).
 
@@ -366,14 +366,14 @@ En tu hoja de estilos base:
     /**
      * Extiende `.foo` en theme.css
      */
-     .foo{}
+     .foo {}
 
 En tu hoja de tema, skin o layout:
 
     /**
      * Extendido de `.foo` en base.css
      */
-     .bar{}
+     .bar {}
 
 Hemos establecido una relación concreta entre dos trozos de código muy separados.
 
@@ -393,11 +393,11 @@ Escribiendo el marcado primero te enfocas en datos, contenido y semántica y _lu
 
 Yo trabajo bajo OOCSS; Divido los componentes en estructura (objetos) y skin (extension). Como **analogía** (No ejemplo) observad lo siguiente:
 
-    .habitación{}
+    .habitación {}
 
-    .habitación--cocina{}
-    .habitación--cuarto{}
-    .habitación--baño{}
+    .habitación--cocina {}
+    .habitación--cuarto {}
+    .habitación--baño {}
 
 Tenemos diferentes tipos de habitaciones en una casa, pero todas ellas reciben un trato similar; todas tienen suelo, techo, paredes y puertas. Podemos compartir esta información con una clase abstracta '.habitación{}. Sin embargo, tenemos diferentes tipos de habitación que las difieren de otras; la cocina puede tener un suelo de baldosas y el dormitorio puede tener alfombra, un baño puede no tener ventana pero es muy probable que un cuarto si la tenga, y cada habitación puede tener las paredes de diferente color. OOCSS (Object Oriented CSS) nos enseña a abstraer los estilos compartidos en un objeto base y luego _extender_ esta información con clases más específicas que añadan estilo(s) único(s).
 
@@ -424,9 +424,9 @@ El sistema de grids debe, idealmente, estar dado en porcentajes. Ya que uso el g
 
 Los tamaños de fuentes deben darse en rems con fallback en pixels. Así se aprovechan los beneficios de accesibilidad de los rems con la robustez de los pixels. Aquí os dejo un mixin de Sass para trabajar con rems y dejar un fallback en pixels (asume que has declarado una variable para el tamaño de fuente en algún lado):
 
-    @mixin font-size($font-size){
-        font-size:$font-size +px;
-        font-size:$font-size / $base-font-size +rem;
+    @mixin font-size($font-size) {
+        font-size: $font-size +px;
+        font-size: $font-size / $base-font-size +rem;
     }
 
 Y en Less:
@@ -549,27 +549,27 @@ Puede ser tentador poner un 'overflow:hidden;' en un elemento para ocultar los e
 
 Sass es mi preprocesador elegido. **Usadlo con cuidado.** Usa preprocesadores para mejorar la creación de CSS pero evita anidaciones exageradas! Anida sólo cuando sea necesario en vanilla CSS, Ej:
 
-    .header{}
-    .header .site-nav{}
-    .header .site-nav li{}
-    .header .site-nav li a{}
+    .header {}
+    .header .site-nav {}
+    .header .site-nav li {}
+    .header .site-nav li a {}
 
 Sería totalmente innecesario en un CSS normal, de manera que lo que sigue estaría **mal**
 
 Sass/Less:
 
-    .header{
-        .site-nav{
-            li{
-                a{}
+    .header {
+        .site-nav {
+            li {
+                a {}
             }
         }
     }
 
 Lo correcto sería escribirlo así:
 
-    .header{}
-    .site-nav{
-        li{}
-        a{}
+    .header {}
+    .site-nav {
+        li {}
+        a {}
     }
