@@ -5,10 +5,12 @@
 ## Traducciones
 
 * [Russian](https://github.com/matmuchrapna/CSS-Guidelines/blob/master/README%20Russian.md)
-* [Chinese](https://github.com/chadluo/CSS-Guidelines/blob/master/README.md)
+* [Simplified Chinese](https://github.com/chadluo/CSS-Guidelines/blob/master/README.md)
+* [Traditional Chinese](https://github.com/doggy8088/CSS-Guidelines/blob/master/README.md)
 * [French](https://github.com/flexbox/CSS-Guidelines/blob/master/README.md)
 * [Japanese](https://github.com/kiwanami/CSS-Guidelines/blob/master/README.ja.md)
-* [Inglés](https://github.com/csswizardry/CSS-Guidelines/blob/master/README.md)
+* [English](https://github.com/csswizardry/CSS-Guidelines/blob/master/README.md)
+* [German](https://github.com/rnarian/CSS-Guidelines/blob/master/README.md)
 
 ---
 
@@ -214,7 +216,7 @@ Una excepción a nuestra regla multi-línea sería en el siguiente caso:
     .t80 { width: 80% }
     .t90 { width: 90% }
 
-En este ejemplo (del [sistema de grids de inuit.css](https://github.com/csswizardry/inuit.css/blob/master/inuit.css/partials/base/_tables.scss#L88)) tiene más sentido dejar nuestro CSS en una sola línea.
+En este ejemplo (del [sistema de grids de inuit.css](https://github.com/csswizardry/inuit.css/blob/master/base/_tables.scss#L90)) tiene más sentido dejar nuestro CSS en una sola línea.
 
 ## Convenciones para los nombres
 Mayormente utilizo clases delimitadas por guiones (Ej: '.foo-bar' y no '.foo_bar' ni '.foobar'), sin embargo, en ciertos casos uso notaciones BEM (Block Element, Modifier - elemento en bloque, modificador).
@@ -313,7 +315,11 @@ Escribe un trozo de código y luego escribe sobre él.
 
 ### Comentarios avanzados
 
+<<<<<<< HEAD
 Hay una serie de técnicas más avanzadas que puedes emplear en lo que respecta comentarios y son las siguientes:
+=======
+Hay una serie de técnicas más avanzadas que puedes usar con los comentarios como:
+>>>>>>> b5aadb7fd789777f27b018f42e91e53c1434e008
 
 * Selectores Cuasi-calificados
 * Código de etiquetas
@@ -321,7 +327,7 @@ Hay una serie de técnicas más avanzadas que puedes emplear en lo que respecta 
 
 #### Selectores Cuasi-calificados
 
-Nunca deberías clasificar tu selector, esto es, nunca debemos escribir 'ul.na{}' si podemos tener '.nav{}'. Calificar selectores disminuye el rendimiento del selector, inhibe la posibilidad de rehusar una clase en un elemento diferente y disminuye su adecuación. Estas son cosas que debemos evitar a toda costa.
+Nunca deberías clasificar tu selector, esto es, nunca debemos escribir 'ul.nav{}' si podemos tener '.nav{}'. Calificar selectores disminuye el rendimiento del selector, inhibe la posibilidad de rehusar una clase en un elemento diferente y disminuye su adecuación. Estas son cosas que debemos evitar a toda costa.
 
 Sin embargo, a veces es útil comunicar al siguiente desarrollador(es) dónde pretendes usar esa clase. Tomemos '.product-page' por ejemplo; esta clase suena como si debiera ser usada en un contenedor principal, quizás el elemento 'body' o 'html' pero es difícil de decir de verdad dónde se debe usar.
 
